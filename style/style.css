@@ -1,17 +1,29 @@
 
-.header{
+.container-header{
     display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
     justify-content: space-between;
+    margin-top:20px;
+    height: 4vh;  
 }
 
-p {
-  font-family: raleway light;
+.topnav{
+    color:red;
+    font-family: 'Raleway';
+    text-align: center; 
+    font: 14pt;
+    height: 2vh;
+    margin-bottom: 5px;
+    margin-top: 50px;
+    word-spacing: 70px;
 }
-h1 {
-  font-size: 40px;
-  font-style: italic;
-  font-family: playfair display;
+.cart{
+    display:flex;
+    justify-content:space-between;
+    height:8vh;
 }
+
 .flower {
   position: relative;
   top: 20px;
@@ -26,85 +38,429 @@ h1 {
   z-index: inherit 2;
 }
 
-.heroimage {
+.topimage {
     /*Box Dimension*/
-    height: 100vh;
+    height: 56em;
     width: 100vw;
 
     text-align: center;
-    color:white;
+    color: white;
 
-  background-image: url("/assets/images/banner-girl.png"),
-  url(/assets/images/flower-bkgd.jpg);
+  background-image: url("/Aloha/assets/images/banner-girl.png"), 
+  url("/Aloha/assets/images/flower-bkgd.jpg");
   background-repeat: no-repeat, repeat-x;
-  background-position: center;
-  position:relative; absolute;
+  background-position: top 100px center, top center;
+  box-shadow:inset 0 0 0 1000px rgba(0,0,0,0.2);
+  
 }
 
-.rowone {
-    display:flex;
+.headtext{
+    /*Overlay ontop of Image of girl with flowers*/
+    display: flex;
+    height: 56em;
+    width: 100vw;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.lineone{
+    font-family: 'Raleway';
+    font-size: 20pt;
+    text-shadow: 2px 2px 8px grey;
+}
+
+.linetwo{
+    font-family: 'Playfair Display';
+    font-size: 24pt;
+    text-shadow: 2px 2px 8px grey;
+}
+
+.linethree{
+    font-family: 'Playfair Display';
+    font-size: 24pt;
+    text-shadow: 2px 2px 8px grey;
+}
+
+@media only screen and (min-width: 601px) {
+    .lineone{
+    font-size: 36pt;}
+    .linetwo{
+        font-size: 50pt;}
+    .linethree{
+        font: size 50pt;;
+    }
+}
+
+/*Middle Text*/
+
+.crafted{
+    display: flex;
     flex-wrap: wrap;
-    padding: 0 0px;
- }
+    justify-content: center;
+    align-content: center;
+    height: 6vh;
+    margin-top: 35px;
+    
+
+}
+.handcrafted{
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    font-style: italic;
+    font-size: 16pt;
+    height: 3vh;
+}
 
 
-.bigrow {
-    flex: 2;
-    max-width: 50%;
+.craftedstyles{
+    font-family: 'Playfair Display';
+    font-size: 16pt;
+    font-weight: normal;
+    font-weight: bolder;
+}
+
+.description-aloha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    color: grey;
+    font-family: 'Raleway';
+    font: 14pt;
+    height:8vh;
+
+    text-align: center;
+}
+
+
+/*Image Grid*/
+
+.container-category{
+    display: grid;
+    grid-template-areas:
+    "a a"
+    "b c"
+    "d e"
+    "f f";
+    grid-gap: 2px;
+    height: 900px;
+}
+
+@media only screen and (min-width: 601px) {
+    .container-category{
+    grid-template-areas:
+     " a a b c"
+     "d e f f ";
+    height:45vw}
+
+}
+
+@media only screen and (min-width: 1240){
+    .container-category{
+        grid-template-areas: {
+            "a a b c"
+            "d e f f";
+        }
+    }
+}
+
+.mens{
+    display: flex;
+    grid-area: a;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/Aloha/assets/images/mens-category.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 1000px rgba(0,0,0,0.2);
+    color: white;
+    font-size: 16pt;
+    font-family: 'Raleway';
+    font-weight: bolder;
+}
+
+.trends{
+    display: flex;
+    grid-area: b;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/Aloha/assets/images/trends-category.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 1000px rgba(0,0,0,0.2);
+    color: white;
+    font-size: 16pt;
+    font-family: 'Raleway';
+    font-weight: bolder;
+}
+
+.glasses{
+    display: flex;
+    grid-area: c;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/Aloha/assets/images/glasses-category.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    box-shadow:inset 0 0 0 1000px rgba(0,0,0,0.2);
+    color: white;
+    font-size: 16pt;
+    font-family: 'Raleway';
+    font-weight: bolder;
+}
+
+.sale{
+    display: flex;
+    grid-area: d;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/Aloha/assets/images/sale-category.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 1000px rgba(0,0,0,0.2);
+    color: white;
+    font-size: 16pt;
+    font-family: 'Raleway';
+    font-weight: bolder;
+}
+
+.bags{
+    display: flex;
+    grid-area: e;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/Aloha/assets/images/bags-category.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 1000px rgba(0,0,0,0.2);
+    color: white;
+    font-size: 16pt;
+    font-family: 'Raleway';
+    font-weight: bolder;
+}
+
+.womens{
+    display: flex;
+    grid-area: f;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/Aloha/assets/images/womens-category.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 1000px rgba(0,0,0,0.2);
+    color: white;
+    font-size: 16pt;
+    font-family: 'Raleway';
+    font-weight: bolder;
+}
+
+/*Carousel Portion*/
+
+.mostloved{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 6vh;
+    margin-top: 35px;
+    
+
+}
+.mostlovedline{
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    font-style: italic;
+    font-size: 16pt;
+    height: 3vh;
+}
+
+
+.productsline{
+    font-family: 'Playfair Display';
+    font-size: 16pt;
+    font-weight: normal;
+    font-weight: bolder;
+/* .mostloved{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 20vh;
+    margin-top: 7vh;
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-size: 16pt; */
+
+}
+.main-carousel{
+    display: flex;
+    flex-direction: row;
     
 }
 
-.smallrow {
-    flex: 1;
-    max-width: 25%;
+.carousel-cell{
+    width: 60%;
+    height: 200px;
+    margin-right: 10px;
+    counter-increment: carousel-cell;
 }
 
-.rowtwo {
-    display:flex;
-    flex-wrap: wrap;
-    padding: 0 0px;
-    
+.carousel-cell:before{
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
 }
 
+.flickity-page-dots{
+    bottom:0px;
+}
+
+.flickity-page-dots.dot{
+width: 12px;
+height: 12px;
+opacity: 1;
+background: transparent;
+border: 2px solid white;
+}
+
+.flickity-page-dots.dot.is-selected{
+    background: white;
+}
 .socialmedia {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.heroimagetwo {
+.footer{
+    background:black;
+    color:white;
+}
+
+
+.waves {
      /*Box Dimension*/
-     height:300px;
-     width: 1000px;
- 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
      text-align:center;
      color:white;
+     font-family: 'Raleway';
  
-   background-image: url("/assets/images/wave-bkgd.jpg");
+   background-image: url("/Aloha/assets/images/wave-bkgd.jpg");
    background-repeat: no-repeat;
    background-position: center;
-   background-size: 1000px 300px;
-   position:relative;
+   background-position:cover;
+   height: 50vh;
+   width: 100vw;
 }
+
+.signup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 6vh;
+    margin-top: 35px;
+    
+
+}
+.signupline{
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    font-style: italic;
+    font-size: 16pt;
+    height: 3vh;
+}
+
+
+.updatesline{
+    font-family: 'Playfair Display';
+    font-size: 16pt;
+    font-weight: normal;
+    font-weight: bolder;
+/* .signupline{
+    font-family: 'Playfair Display';
+    font-size: 16pt;
+    font-style: italic;
+}
+.updatesline{
+    font-family: 'Playfair Display';
+    font-size: 16pt;
+    font-weight: bolder;
+    height: 5vh; */
+}
+
+
+
 
 .container{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+
+.footerdescription{
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display';
+    margin-top: 5px;
+}
+
+.phonenumber{
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display';
+    color: white;
+    margin-top: 10px;
+}
+
+.address{
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display';
+    color: grey;
+    margin-top: 10px;
+}
+
+.socialmedia{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Raleway';
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 601px) {
+    .socialmedia{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        
+    }
+
+}
+
+@media only screen and (min-width: 601){
+    .footerdescription{
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: flex-start;
+    }
+}
     
-
 /*Full-width input fields*/
-input=[type=text] {
-    width: 100%;
-    padding:15px;
-    margin:5px 0;
-    background: #flflfl;
-}
 
-input[type=text]:focus{
-    background-color: #dddddd;
-    outline: none;
-}
 
 /*Set a style for the submit button*/
 .btn{
@@ -121,6 +477,16 @@ input[type=text]:focus{
     opacity:1;
 }
 
-.site-footer{
-    background-color:grey;
+/*Fonts*/
+.playfairreg {
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    font-style: normal;
 }
+
+.ralewayreg {
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-style: normal;}
+
+  
